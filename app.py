@@ -72,7 +72,7 @@ if st.session_state.view == "About":
 
 elif st.session_state.view == "Image Reader":
 
-    st.title("Smart ATS")
+    st.title("Smart ATS using Gemini Pro Vision")
     st.text("Improve Your Resume ATS through Image Reader")
     input_text=st.text_area("Job Description: ",key="input")
     uploaded_file=st.file_uploader("Upload your resume(PDF)...",type=["pdf"])
@@ -154,7 +154,7 @@ elif st.session_state.view == "Text Reader":
     """
 
     ## streamlit app
-    st.title("Smart ATS")
+    st.title("Smart ATS using Gemini Pro")
     st.text("Improve Your Resume ATS through Text Reader")
     jd=st.text_area("Job Description: ")
     uploaded_file=st.file_uploader("Upload Your Resume(PDF)...",type="pdf",help="Please uplaod the pdf")
@@ -167,4 +167,5 @@ elif st.session_state.view == "Text Reader":
             response=get_gemini_response_text(input_prompt)
             # Displaying the "JD Match" value
             st.write(response)
-            
+
+                    
